@@ -1,0 +1,1 @@
+## Blind for colleges
