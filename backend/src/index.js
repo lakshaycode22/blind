@@ -1,8 +1,14 @@
 import express from "express"
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+import { PORT } from "./constants.js";
+import connectDb from "./db/index.js"
+
+dotenv.config();
 
 const app = express()
-const port = 3000
+
+connectDb();
+// const port = 3000
 
 // app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
